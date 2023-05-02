@@ -61,7 +61,8 @@ const fetchTweets = async (query) => {
   try {
     const response = await fetch(url, options);
     const result = await response.json();
-    console.log(result);
+
+    console.log("result:" + result);
     return result;
   } catch (error) {
     console.error(error);
@@ -92,4 +93,4 @@ const fetchSpellCheck = async (text) => {
   }
 };
 
-export { fetchImageSearch };
+export { fetchImageSearch, fetchTweets };
