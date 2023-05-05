@@ -29,7 +29,7 @@ class ImageSearchPresenter extends Component {
     this.setState({ loading: true });
 
     try {
-      let results = await fetchImageSearch(query, 50);
+      let results = await fetchImageSearch(query, 25);
       //const multiplier = 200;
       //const multipliedResults = results.concat(...Array.from({ length: multiplier - 1 }, () => results));
       //results = multipliedResults;

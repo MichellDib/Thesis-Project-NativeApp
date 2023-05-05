@@ -2,6 +2,7 @@ import React from 'react';
 import { View, Image, StyleSheet, Text, ScrollView } from 'react-native';
 
 const ImageSeachView = ({ results, loading, error }) => {
+  
   if (loading) {
     return <Text>Loading...</Text>;
   }
