@@ -7,7 +7,7 @@ import GeolocationPresenter from './presenter/GeolocationPresenter';
 function App() {
   return (
     <View>
-      <GeolocationPresenter></GeolocationPresenter>
+      <TweetPresenter></TweetPresenter>
     </View>
   );
 }

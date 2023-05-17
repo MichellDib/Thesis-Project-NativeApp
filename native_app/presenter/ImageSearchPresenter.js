@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import ImageSearchView from '../view/ImageSearchView';
-import { fetchImageSearch } from '../api';
+import { fetchImageSearch, fetchTweets2 } from '../api';
 
 class ImageSearchPresenter extends Component {
   state = {
@@ -11,6 +11,7 @@ class ImageSearchPresenter extends Component {
     error: null,
     renderTime: null
   };
+
 
   componentDidMount() {
     this.handleSubmit();
@@ -29,7 +30,7 @@ class ImageSearchPresenter extends Component {
     this.setState({ loading: true });
 
     try {
-      let results = await fetchImageSearch(query, 25);
+      let results = await fetchImageSearch(query, 50);
       //const multiplier = 200;
       //const multipliedResults = results.concat(...Array.from({ length: multiplier - 1 }, () => results));
       //results = multipliedResults;

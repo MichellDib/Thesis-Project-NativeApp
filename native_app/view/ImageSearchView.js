@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, Image, StyleSheet, Text, ScrollView } from 'react-native';
+import { View, Image, StyleSheet, Text, ScrollView, Button, TextInput } from 'react-native';
 
 const ImageSeachView = ({ results, loading, error }) => {
   
@@ -21,6 +21,11 @@ const ImageSeachView = ({ results, loading, error }) => {
   return (
     <ScrollView contentContainerStyle={styles.scrollContainer}>
       <View style={styles.container}>
+        
+        <TextInput placeholder="Search Query" />
+        
+        <TextInput placeholder="50" />
+
       <Text>Render time: {renderTime}ms</Text>
         {images}
       </View>
